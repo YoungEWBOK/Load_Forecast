@@ -2,7 +2,7 @@
 
 ### 单设备情况
 
-```
+```bash
 dataset/
 	origin_dataset.csv
 ```
@@ -45,7 +45,7 @@ dataset/
 ### 一、模型训练代码
 
 #### 基本命令格式：
-```
+```bash
 python train_pipeline.py [--dataset_dir DATASET_DIR] [--model_save_dir MODEL_SAVE_DIR]
 ```
 
@@ -55,19 +55,19 @@ python train_pipeline.py [--dataset_dir DATASET_DIR] [--model_save_dir MODEL_SAV
 
 #### 示例命令：
 1. **使用默认目录处理所有设备的数据并训练模型**：
-   ```
+   ```bash
    python train_pipeline_cli.py
    ```
    - 该命令会从默认的 `dataset` 目录中获取所有符合条件的设备数据，拆分数据集并开始训练。
 
 2. **指定数据集目录和模型保存目录**：
-   ```
+   ```bash
    python train_pipeline_cli.py --dataset_dir my_datasets --model_save_dir my_models
    ```
    - 该命令会从 `my_datasets` 目录读取设备数据，并将训练后的模型保存在 `my_models` 目录中。
 
 3. **仅指定数据集目录**：
-   ```
+   ```bash
    python train_pipeline_cli.py --dataset_dir custom_dataset_folder
    ```
    - 该命令会从 `custom_dataset_folder` 目录中读取设备数据，并在当前目录中保存训练的模型。
@@ -83,7 +83,7 @@ python train_pipeline.py [--dataset_dir DATASET_DIR] [--model_save_dir MODEL_SAV
   
 
 执行以下命令：
-```
+```bash
 python train_pipeline_cli.py --dataset_dir dataset --model_save_dir models
 ```
 将会拆分每个设备的数据，并为每个设备分别训练模型，并保存在 `models` 目录中。
@@ -91,7 +91,7 @@ python train_pipeline_cli.py --dataset_dir dataset --model_save_dir models
 ### 二、模型预测代码
 
 1. **基本命令格式**：
-   ```
+   ```bash
    python load_prediction_cli.py "YYYY-MM-DD HH:MM:SS" [--num_days N] [--devices device1 device2 ...] [--output_dir directory]
    ```
 
@@ -104,19 +104,19 @@ python train_pipeline_cli.py --dataset_dir dataset --model_save_dir models
 3. **示例命令**：
    - **预测未来3天的负载**：
      
-     ```
+     ```bash
      python load_prediction_cli.py "2023-01-16 00:00:00" --num_days 3 --devices device1 device2
      ```
    - **为所有设备预测未来30天的负载**（自动从数据集中获取设备）：
-     ```
+     ```bash
      python load_prediction_cli.py "2023-01-16 00:00:00" --num_days 30
      ```
    - **为所有设备预测负载，输出到自定义目录**：
-     ```
+     ```bash
      python load_prediction_cli.py "2023-01-16 00:00:00" --output_dir my_predictions
      ```
    - **为所有设备生成所有天数的预测文件**（未指定 `num_days`）：
-     ```
+     ```bash
      python load_prediction_cli.py "2023-01-16 00:00:00" --devices device1 device2
      ```
 
