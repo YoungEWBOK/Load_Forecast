@@ -119,3 +119,9 @@ python train_pipeline_cli.py --dataset_dir dataset --model_save_dir models
      ```
      python load_prediction_cli.py "2023-01-16 00:00:00" --devices device1 device2
      ```
+
+## Reference
+
+**感谢Garyou19开源的代码，本项目在此基础上进一步开发。**
+
+**原仓库链接：https://github.com/Garyou19/LSTM_PyTorch_Electric-Load-Forecasting**
