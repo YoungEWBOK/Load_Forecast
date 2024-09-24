@@ -4,7 +4,7 @@
 
 ```bash
 dataset/
-   origin_dataset.csv
+    origin_dataset.csv
 ```
 
 ```bash
