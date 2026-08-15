@@ -1,3 +1,5 @@
+
+
 ## 数据集要求
 
 ### 单设备情况
@@ -46,7 +48,7 @@ dataset/
 
 #### 基本命令格式：
 ```bash
-python train_pipeline.py [--dataset_dir DATASET_DIR] [--model_save_dir MODEL_SAVE_DIR]
+python train_pipeline_cli.py [--dataset_dir DATASET_DIR] [--model_save_dir MODEL_SAVE_DIR]
 ```
 
 #### 参数说明：
